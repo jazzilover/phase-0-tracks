@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>practice form</title>
+</head>
+<body>
+
+</body>
+</html>
+<form name="form" action="success.html" method="post">
+  <fieldset>
+    <div>
+      <label>last name:</label>
+      <input type="text" name="lastname">
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email">
+    </div>
+
+    <div>
+      <label>Password:</label>
+      <input type="password" name="password">
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div>
+      <label>Form name:</label>
+      <input type="text" name="form-name" placeholder="Name this Form">
+    </div>
+
+    <div>
+      <label>Type of form:</label>
+      <select name="form">
+        <option value="type">typed</option>
+        <option value="type">hand</option>
+        <option value="type">electronic</option>
+      </select>
+    </div>
+
+    <div>
+    <textarea name="textarea" rows="10" cols="50">Write a brief summary of why you chose this form</textarea>
+    </div>
+
+    <div>    
+      <label>Choose a date:</label>
+      <input type="date" name="date">
+    </div>
+
+    <div>
+      <input type="checkbox" name="cb-agree" value="agree">
+      I reviewed and prepared this form.
+    </div>
+  </fieldset>
+  
+  <button type="submit">Save this form</button>
+</form>
