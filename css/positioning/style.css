@@ -1,0 +1,17 @@
+img.octopus {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 25%;
+  z-index: 1;
+  }
+  img.hat {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 23%;
+  z-index: 2;
+  }
+  img.glasses {
+  position: absolute;
+  margin-top: 18%;
+  margin-left: 28%;
+  z-index: 3;
