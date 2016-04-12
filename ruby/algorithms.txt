@@ -1,0 +1,26 @@
+-for each rider on a elevator:
+	-until you hear a number from 1 to 40 or have attempted 6 times:
+		- ask what floor they want to go to.
+		-  wait three seconds for a response.
+	- if no response was heard:
+		- close the elevator door
+
+		Brushing my teeth
+turn on the water
+pick up my toothbrush off of charger
+pickup my toothpaste
+put toothpast on my toothbrush
+put down toothpast
+put water on my toothbrush head with the toothpast on it
+turn on toothbrush
+brush outside top teeth for 1 minute until toothbrush signals
+brush inside top teeth for 1 minute until toothbrush signals
+brush bottom outside teeth for 1 minute until toothbrush signals
+brush bottom inside teeth for 1 minute until toothbrushsignals
+toothbrush shuts off
+rinse mouth with water
+rinse toothbrush with water
+turn off water
+put toothbrush on charger
+
+	 
