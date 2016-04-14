@@ -1,0 +1,24 @@
+header  {
+  background-color: yellow;
+  
+}
+
+.column-1 {
+    border: 15px;
+    background-color: red;
+    width:  50%;
+    float: left;
+    }
+
+.column-2 {
+    border: 5px;
+    background-color:blue;
+    width:  50%;
+    float: right;
+    }
+
+footer {
+    text-align: left;
+    background-color: pink;
+    color:yellow;
+    }
