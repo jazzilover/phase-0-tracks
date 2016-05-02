@@ -11,7 +11,7 @@
 class Dragon
 	attr_reader  :color, :age
 	attr_accessor  :name
-	def intialize(name, color, age)
+	def initialize(name, color, age)
 		@name = name
 		@color = color
 		@age = age
@@ -30,26 +30,29 @@ end
 name = 'a'
 color = 'na'
 age = 0
-dragons = {}
+dragons = []
 
 loop do
-  puts "enter your dragon's name - or enter quit to exit"
+  puts "enter your dragon's name"
   name = gets.chomp
   puts "enter the color of the dragon"
   color = gets.chomp
-  puts "enter the  age of the dragon"
+  puts "enter the  age of the dragon - or enter quit to exit"
   age = gets.chomp.to_i
-    if name == 'quit' || name == ''
+    if age == 'quit' || name == ''
      break
    end
-  dragon = Dragon.new(name, color, age)
-  puts dragon
+  dragons << Dragon.new(name, color, age)
+  puts dragons
   puts "There is #{dragons.length} in the array"
 end
 
 
 puts 'Here are All of the Dragons you created!'
 dragons.each do |dragon|
+  puts dragon
+  puts "My Dragon name is #{@name}, I am #{@color} in color, and Im #{@age} years of age "
     puts dragon.breathe_fire
+    puts dragon.breathe_ice
 	end
 end
