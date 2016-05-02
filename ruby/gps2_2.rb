@@ -110,7 +110,7 @@ end
 
 def print_list(hash)
 	hash.each do |item, quantity|
-		puts "#{item}, #{quantity}"
+		puts "Your Grocery list: consitss of the following item #{item}, and it has a quantity of #{quantity}"
 	end
 end	
 
