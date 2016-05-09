@@ -62,5 +62,5 @@ class Kitten
     i += 1
   end
 
-new_kitten.each {|kitten| p "#{kitten.meow} and #{kitten.purr}"}
+new_kitten.each {|kitten| p "#{kitten}, said #{kitten.meow} and #{kitten.purr}"}
 end
