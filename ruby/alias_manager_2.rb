@@ -60,7 +60,11 @@ def cons_swapper(string)
   answer
 end
 
+<<<<<<< HEAD
 #  create a method  to perform the created methods
+=======
+#  create a method to perform the created methods
+>>>>>>> 5.6
 
 def name_aliaser(agent_name)
   #1. swap the words
