@@ -1,5 +1,6 @@
 #  design and build a nested data structure to represent a real-world construct
-#  of a highway that is full of cars that are different sizes, and have different seating capacity
+#  of a highway that is full of cars that are different sizes, and have different seating capacity.
+#  the flow of the nested data structure will show each area associated with the vehicle size.
 
 highway =  {
 	large_size:  {
