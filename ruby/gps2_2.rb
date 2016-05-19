@@ -1,128 +1,113 @@
-# Method to create a list
-# input: create grocery_list_hash = {}
+## Method to create a list
+# input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
-  # make a method that will place items into our grocery list hash
-  # set default quantity to 1
-  # print the list to the console [can you use one of your other methods here?]
-# output: hash
-
-# def grocery_list(list)
-# 	grocery_list = list.split
-# 	grocery_list.each do |list|
-# 	grocery_list .each do |list => 1| 
-# 	print_list(list)
-# 	end	
-# end
+  # pass in through the method our key value
+  # split the items string at instances of spaces
+  # set the items string as keys and the associated pair value
+  # set default quantity to 1 for each pair value
+  # print the list to the console. call the print method to our current list
+# output: hash of grocery items and their corresponding quantity values
 
 # Method to add an item to a list
-# input: item name and optional quantity
-# steps: add item and quantity to hash
-# output: print new list with updated hash
-
-# def add_item(name, quantity)
-
+# input: hash, item name and optional quantity 
+# steps: pick an item and its corresponding quantity and assign it to a list as a key-value pair
+# output: an updated hash with our new key-value pairing using the print method
 
 # Method to remove an item from the list
-# input: item name
-# steps: check for item in list, then remove from list
-# output: print new list with updated hash
+# input: hash, the key that is going to be removed
+# steps: choose the key and its value and removing it from the hash
+# output: the new updated hash without the key-value that was removed via the print method
 
 # Method to update the quantity of an item
-# input: new quantity of item
-# steps: check hash for quantity of particular item, update quantity
-# output: print new list with updated hash to verify change is made
+# input: hash, the key and its new quantity
+# steps: overwrite the existing key with its new value pair
+# output: updated hash via the print method
 
 # Method to print a list and make it look pretty
-# input: name of grocery hash
-# steps: print out list of items and quantity
-# output: grocery list hash
+# input: the hash
+# steps: print statement listing the items and their corresponding quantities
+# output: a list of all the items and their quantities
 
-# def print_list(pretty_list)
-# 	puts pretty_list
-# end
-
-# # ###############
-# # # DRIVER CODE #
-# # ###############
-
-# grocery_list("carrots apples cereal pizza")
-
-# Method to create a list
-# input: create grocery list hash = {} outside method
-# steps: 
-  # make a method that will place items into our grocery list hash
-  # set default quantity to 1
-  # print the list to the console [can you use one of your other methods here?]
-# output: hash
-
-
-list = {}
-
-def grocery_list(hash, items)
-	grocery_list = items.split
-	grocery_list.each do |item|
-		hash.store(item, 1)
-	end	
-	hash
-end	
-
-grocery_list(list, "carrots apples ice cream")
-
-
-# Method to add an item to a list
-# input: item name and optional quantity
-# steps: add item and quantity to hash
-# output: print new list with updated hash
-
-def add_item(hash, item, quantity)
-	hash.store(item, quantity)
-	hash
+def create_list(grocery_items)
+  grocery_list = {}
+  grocery_items = grocery_items.split(" ")
+  grocery_items.each do |item| 
+  grocery_list.store(item, 1)
+  end
+  print_list(grocery_list)
+  return grocery_list
 end
 
+def add_item(add_hash, item, quantity)
+  add_hash.store(item, quantity)
+  print_list(add_hash)
+end
 
+def remove_item(remove_hash, item)
+  remove_hash.delete(item)
+  print_list(remove_hash)
+end
 
-# Method to remove an item from the list
-# input: item name
-# steps: check for item in list, then remove from list
-# output: print new list with updated hash
+def update_item(update_hash, item, quantity)
+  update_hash.store(item, quantity)
+  print_list(update_hash)
+end
 
-def remove_item(hash, item)
-	hash.delete(item)
-	hash
-end	
+def print_list(current_list)
+  current_list.each do |item, quantity|
+    puts "Your grocery list has the item #{item} with a quantity of #{quantity}."
+  end
+end
 
-# Method to update the quantity of an item
-# input: new quantity of item
-# steps: check hash for quantity of particular item, update quantity
-# output: print new list with updated hash to verify change is made
+########################
+#### driver code  ######
+########################
 
-def update_quantity(hash, item, quantity)
-	new_hash = {item => quantity}
-	hash.merge!(new_hash)
-	hash
-end	
-	
-
-# Method to print a list and make it look pretty
-# input: name of grocery hash
-# steps: print out list of items and quantity
-# output: grocery list hash
-
-def print_list(hash)
-	hash.each do |item, quantity|
-		puts "#{item}, #{quantity}"
-	end
-end	
-
-grocery_list(list, "carrots apples cereal pizza")
-p list
+list = create_list("carrots apples cereal pizza")
 add_item(list, "lemonade", 2)
 add_item(list, "tomatoes", 3)
 add_item(list, "onions", 1)
 add_item(list, "ice cream", 4)
-p list
 remove_item(list, "lemonade")
-p list
-update_quantity(list, "ice cream", 1)
-p list
-print_list(list)
+update_item(list, "ice cream", 1)
+
+  
+#  What did you learn about pseudocode from working on this challenge?
+
+#  I learned that pseudocode can be a great guide to solving problems
+
+#  What are the tradeoffs of using arrays and hashes for this challenge?
+
+#  The tradeoffs were that hashes allowed you to update values and arrays provided a set list of items
+
+#  What did you learn about pseudocode from working on this challenge?
+
+#  I learned that pseudocode can be a great guide to solving problems
+
+#  What are the tradeoffs of using arrays and hashes for this challenge?
+
+# The tradeoffs were that hashes allowed you to update values and arrays
+# provided a set list of items
+
+# What does a method return?
+
+# A method returns the function defined within its borders
+
+# What kind of things can you pass into methods as arguments?
+
+#  Integers, strings, arrays, hashes
+
+#  How can you pass information between methods?
+#  you can pass information between methods as parameters from one method to another.
+
+#  What concepts were solidified in this challenge, and what concepts are still confusing?
+#  A deeper understanding of methods was solidified. 
+
+
+#  How can you pass information between methods?
+#  By the use of parameters between methods
+
+#  What concepts were solidified in this challenge, and what concepts
+#  are still confusing?
+#   A deeper understanding of methods was solidified and 
+#   the passing of information outside the method is still a little confusing
