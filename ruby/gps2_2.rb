@@ -1,4 +1,4 @@
-# Method to create a list
+## Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
   # pass in through the method our key value
@@ -62,7 +62,11 @@ end
 ########################
 #### driver code  ######
 ########################
+<<<<<<< HEAD
 # create_list("carrots apples cereal pizza")
+=======
+
+>>>>>>> guided_pair_2.2
 list = create_list("carrots apples cereal pizza")
 add_item(list, "lemonade", 2)
 add_item(list, "tomatoes", 3)
@@ -71,6 +75,7 @@ add_item(list, "ice cream", 4)
 remove_item(list, "lemonade")
 update_item(list, "ice cream", 1)
 
+<<<<<<< HEAD
 
   
 #What did you learn about pseudocode from working on this challenge?
@@ -79,6 +84,16 @@ update_item(list, "ice cream", 1)
 #What are the tradeoffs of using arrays and hashes for this challenge?
 
 #-The tradeoffs were that hashes allowed you to update values and arrays provided a set list of items
+=======
+#What did you learn about pseudocode from working on this challenge?
+
+#- I learned that pseudocode can be a great guide to solving problems
+
+#What are the tradeoffs of using arrays and hashes for this challenge?
+
+#-The tradeoffs were that hashes allowed you to update values and arrays
+#   provided a set list of items
+>>>>>>> guided_pair_2.2
 
 #What does a method return?
 
@@ -87,7 +102,18 @@ update_item(list, "ice cream", 1)
 #What kind of things can you pass into methods as arguments?
 
 #-Integers, strings, arrays, hashes
+<<<<<<< HEAD
 #How can you pass information between methods?
 # you can pass information between methods as parameters from one method to another.
 #What concepts were solidified in this challenge, and what concepts are still confusing?
 # A deeper understanding of methods was solidified. 
+=======
+
+#How can you pass information between methods?
+# By the use of parameters between methods
+
+#What concepts were solidified in this challenge, and what concepts
+# are still confusing?
+# A deeper understanding of methods was solidified.
+# This 
+>>>>>>> guided_pair_2.2
