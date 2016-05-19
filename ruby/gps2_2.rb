@@ -95,7 +95,7 @@ update_item(list, "ice cream", 1)
 
 # What kind of things can you pass into methods as arguments?
 
-<<<<<<< HEAD
+
 # Method to print a list and make it look pretty
 # input: name of grocery hash
 # steps: print out list of items and quantity
@@ -119,7 +119,7 @@ p list
 update_quantity(list, "ice cream", 1)
 p list
 print_list(list)
-=======
+
 #  Integers, strings, arrays, hashes
 
 #  How can you pass information between methods?
@@ -136,4 +136,3 @@ print_list(list)
 #  are still confusing?
 #   A deeper understanding of methods was solidified and 
 #   the passing of information outside the method is still a little confusing
->>>>>>> gps2.2
