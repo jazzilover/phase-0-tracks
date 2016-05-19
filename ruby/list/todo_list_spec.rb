@@ -1,10 +1,15 @@
 require_relative  'todo_list.rb'
 
+<<<<<<< HEAD
 describe TodoList do
 	let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) } 
   
 	it "initializes with two items" do
   	expect(list.get_items).to eq ["do the dishes", "mow the lawn"]
+=======
+  it "stores the list items given on initialization" do
+    expect(list.get_items).to eq ["do the dishes", "mow the lawn"]
+>>>>>>> Devbootcamp/master
   end
 
 	it "adds an item to the list" do
