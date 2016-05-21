@@ -11,4 +11,4 @@
 # BEHAVIOR -----------------------
 # Jump
 # Roll
-# Squat
+# Sit
