@@ -46,21 +46,37 @@ class Kitten
 	def initialize
 		puts "Initiate a new kitten instance..."
 	end
-	
+
+	def calculate(counter)
+		puts "I am cat number #{counter}"
+	end
+
 	def meow
-		"Meow!"
+		puts "I say Meow!"
 	end
 	
 	def purr
-		"Prr!"
+		puts "I like to Prr!"
 	end
+end
 
+# ###############
+# # DRIVER CODE #
+# ###############
+
+  counter = 0
   i = 0
   new_kitten = []
   while i < 50
 		new_kitten << Kitten.new
     i += 1
   end
+new_kitten.each do |kitten|
+	kitten.calculate(counter)
+	kitten.meow
+	kitten.purr
+	counter += 1
+	end
 
-new_kitten.each {|kitten| p "#{kitten.meow} and #{kitten.purr}"}
-end
+# new_kitten.each {|kitten| p "#{kitten}, said #{kitten.meow} and #{kitten.purr}"}
+
