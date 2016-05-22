@@ -77,11 +77,3 @@ new_kitten.each do |kitten|
 	kitten.purr
 	counter += 1
 	end
-
-# new_kitten.each {|kitten| p "#{kitten}, said #{kitten.meow} and #{kitten.purr}"}
-
-<<<<<<< HEAD
-=======
-new_kitten.each {|kitten| p "#{kitten}, said #{kitten.meow} and #{kitten.purr}"}
-end
->>>>>>> master
