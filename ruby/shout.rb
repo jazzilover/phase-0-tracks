@@ -29,7 +29,7 @@ end
 # puts Shout.yelling_happily("I won the lottery")
 
 angry_voice = Angry_voice.new
-angry_voice.yelling("Would you please stop making that sound")
+angry_voice.yelling("Would you please stop making that lound sound")
 
 happy_voice = Happy_voice.new
-happy_voice.yelling("I just won the lottery")
+happy_voice.yelling("I just won the lottery, Can you believe it?")
