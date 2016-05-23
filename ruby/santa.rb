@@ -1,21 +1,17 @@
-# defined a class called santa and assigned
-# some instance methods to the class
-
 class Santa
-	attr_reader  :age, :ethinicity, :name
-	attr_accessor  :gender, :reindeer_ranking
+	attr_reader :ethnicity, :reindeer_ranking
+	attr_accessor :age, :gender
 
-	def initialize(name,gender,ethinicity)
-		puts "Initializing Santa instance..."
-		@name = name
+  def initialize(gender, ethnicity)
+    puts "Initializing Santa instance ..."
 		@gender = gender
-		@ethinicity = ethinicity
+		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end
 
-	def speak
-		puts "Ho, ho, ho! Haaaappy holidays!"
+  def speak
+ 		puts "Ho, ho, ho! Haaaappy holidays!"
 	end
 
 	def eat_milk_and_cookies(cookie_type)
@@ -27,11 +23,15 @@ class Santa
 	end
 
 	def get_mad_at(reindeer_name)
-		@reindeer_ranking << reindeer_name
+		@reindeer_ranking.delete(reindeer_name)
+		@reindeer_ranking.push(reindeer_name)
 	end
+  #   removed_reindeer = @reindeer_ranking.delete(reindeer)
+  #   @reindeer_ranking.push(removed_reindeer)
+  # end
 
-	# getter methods
-
+  ### two getter methods  ###
+  
 	# def age
 	# 	@age
 	# end
@@ -39,45 +39,67 @@ class Santa
 	# def ethnicity
 	# 	@ethnicity
 	# end
-
-	# setter methods
+###  a setter method  ###
 
 	# def gender=(new_gender)
 	# 	@gender = new_gender
 	# end
 
-	
 end
 
-# ###############
-# # DRIVER CODE #
-# ###############
+#####################
+###  DRIVER CODE  ###
+#####################
 
-# santa = Santa.new("jeff", "male", "black")
-# santa.speak
-# santa.eat_milk_and_cookies("snickerdoodle")
-# p santa.celebrate_birthday
-# p santa.celebrate_birthday
+# bob = Santa.new('N/A', 'White')
+# p bob
+# bob.speak
+# bob.eat_milk_and_cookies('snickerdoodle')
+# p bob.age
+# bob.celebrate_birthday
+# p bob.age
+# p bob.ethnicity
+# p bob.get_mad_at('Vixen')
+# bob.gender = "male"
+# p bob
 
-santas = []
 
-santas << Santa.new("jeff", "male", "black")
-santas << Santa.new("jorge", "male", "Latino")
-santas << Santa.new("joey", "bigender", "white")
-santas << Santa.new("jasmine", "female", "Japanese")
-santas << Santa.new("jara", "female", "prefer not to say")
-santas << Santa.new("jaden", "gender fluid", "Mystical Creature (unicorn)")
-santas << Santa.new("jack", "N/A", "N/A")
-# puts "#{santas.name}"
+# santas = []
+# santas << Santa.new("agender", "black")
+# santas << Santa.new("female", "Latino")
+# santas << Santa.new("bigender", "white")
+# santas << Santa.new("male", "Japanese")
+# santas << Santa.new("female", "prefer not to say")
+# santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
+# santas << Santa.new("N/A", "N/A")
+
+# santas = []
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# example_genders.length.times do |i|
+# 	santas << Santa.new(example_genders[i], example_ethnicities[i])
+# 	end
 # santas.each do |santa|
-# 	puts "This santas name is #{@name}, its gender is #{@gender}, its race is #{@ethinicity}"
+# 	p santa.age
+# 	santa.celebrate_birthday
+# 	p santa.age
+# 	p santa.reindeer_ranking
+# 	santa.get_mad_at('Vixen')
+# 	p santa.reindeer_ranking  
 # end
-# Santa.eat_milk_and_cookies("snickerdoodle")
-# Santa.celebrate_birthday
-# puts santas
-# # puts santas[0]@name
-# puts santas.age
-# puts @ethinicity
-# puts @gender
-# puts @reindeer_ranking
-# # puts "This santas name is #{@name}, its gender is #{@gender}, its race is #{@ethinicity}"
+
+
+
+
+
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_reindeer_names = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+100.times do
+  random_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+  random_santa.age = rand(140)
+  p random_santa.age
+  p random_santa.ethnicity
+  p random_santa.gender
+  p random_santa.get_mad_at(example_reindeer_names.sample)
+end
