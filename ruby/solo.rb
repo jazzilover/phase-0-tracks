@@ -10,33 +10,34 @@
 
 class Dragon
 # attr_reader  :color, :age
-	attr_accessor  :name, :color, :age, :dragons
+	attr_accessor  :name, :color, :age, :breathe
 
-	def initialize(name, color, age)
+	def initialize(name, color, age, breathe)
+		puts "Initiating new dragon instance..."
 		@name = name
 		@color = color
 		@age = age
-		@dragons = dragons
-		puts "initialize dragons"
+		@breathe = breathe
+		
 	end
 
 	def breathe_fire
-  		puts "WHOOOOOOMPH! *sizzle*"
+		puts "I breathe fire WHOOOOOOMPH! *sizzle*"
 	end
 
 	def breathe_ice
-		puts "BRRRRRRRRRRR! Strike"
+		puts "I breathe ice BRRRRRRRRRRR! Strike"
 	end
 
-	def dragons_den(dragon_data)
-		@dragons << dragon_data
-	end
+	# def dragons_den(dragon_data)
+	# 	@dragons << dragon_data
+	# end
 end
 
 
-name = 'a'
-color = 'na'
-age = 0
+# name = 'a'
+# color = 'na'
+# age = 0
 dragons = []
 
 #=======================================================================
@@ -44,32 +45,37 @@ dragons = []
 # DRIVER CODE
 #=======================================================================
 
+# dragon1 = Dragon.new("joe","red",3)
+# dragon1.breathe_fire
+# dragon1.breathe_ice
+# dragons << dragon1
+# p dragons
 loop do
-	dragons << Dragon.new(name, color, age)
-	puts "enter your dragon's name"
-	name = gets.chomp
+	puts "enter the  age of the dragon"
+	age = gets.chomp.to_i
 	puts "enter the color of the dragon"
 	color = gets.chomp
-	puts "enter the  age of the dragon - or enter quit to exit"
-	age = gets.chomp.to_i
-	if age == 'quit' || name == ''
+	puts "does your dragon breathe fire or ice?"
+	breathe = gets.chomp
+	puts "enter your dragon's name - or enter quit to exit"
+	name = gets.chomp
+	if name == 'quit' || name == ''
 		break
 	else
-
-		puts name
-		puts color
-		puts age
-		puts dragons #{}"There is #{dragons.length} in the array"
+		dragons << Dragon.new(name, color, age, breathe)
 	end
 end
 
 puts 'Here are All of the Dragons you created!'
 
 dragons.each do |dragon|
-	puts dragon
-	puts "My Dragon name is #{@name}, I am #{@color} in color, and Im #{@age} years of age "
-	puts dragon.breathe_fire
-	puts dragon.breathe_ice
+	puts "My Dragon name is #{dragon.name}, I am #{dragon.color} in color, and Im #{dragon.age} years of age "
+		if dragon.breathe == "fire"
+		dragon.breathe_fire
+		elsif dragon.breathe == "ice"
+		dragon.breathe_ice
+		else
+		puts "Not sure what this dragon breathes!!!!"
 	end
-	#new_kitten.each {|kitten| p "#{kitten}, said #{kitten.meow} and #{kitten.purr}"}
-	# dragons.each {|dragon| p "#{name}, I am #{color} in color, and Im #{age} years of age"}
+end
+	
